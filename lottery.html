@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+	<link rel="stylesheet" type="text/css" href="./src/css/lottery.css">
+	<title></title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<body>
+	<div class="app">
+		<div class="count">
+			<div class="centenCount">
+				<form action="" method="post">
+				      <div class="clearfix">
+				      	<label>手机号码</label>
+				      	<input type="tel" pattern="[1-9][0-9]{12}">
+				      </div>
+				      <div class="clearfix">
+				      	<label>您的名字</label>
+				      	<input type="text" required>
+				      </div>
+				</form>
+				<div class="money">
+					<p>恭喜您</p>
+					<p>获得米优美商城</p>
+					<p>价值98元洗发水</p>
+				</div>
+				<img src="src/images/bg4.png" class="img-responsive">
+				<a href="javascript:void(0)" class="discounts">点击抽奖</a>
+				<p class="pBottom clearfix">
+					<a href="">去商城</a>
+					<a href="index.html">返回首页</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+			$('.discounts,.discountsBtn,.discountsBtn1').click(function(ev){
+				// 点击抽奖按扭
+				if ($(this).hasClass('discounts')) {
+					// 这里是中奖后
+					// $('.count').css('backgroundImage','url("src/images/bg3.jpg")');
+					// $(this).removeClass('discounts').addClass('discountsBtn').text('点击领取').siblings('form').stop().fadeOut(0).siblings('.money').stop().fadeIn('slow');
+
+					// 这里是没中奖的
+				    $('.count').css('backgroundImage','url("src/images/bg5.jpg")');
+				    $(this).removeClass('discounts').addClass('discountsBtn1').text('继续挑战').siblings('form').stop().fadeOut(0);
+				    $('.count>.centenCount').css('top','70%');
+
+				    // 下面这行阻止链接跳车
+				    return false;
+
+				}
+				// 这里是点击领取按扭
+				if ($(this).hasClass('discountsBtn')) {
+					// 下面这行是添加查看奖品的链接，链接地址加到引号里
+					$(this).attr('href','index.html');
+					$(this).text('查看奖品').siblings('.money').stop().fadeOut(0).siblings('img').stop().fadeIn('slow');					
+				}
+				// 点击继续挑点跳转链接
+				if ($(this).hasClass('discountsBtn1')) {
+					$(this).attr('href','game2.html');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

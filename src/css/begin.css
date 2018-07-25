@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html {
+    font-size: 62.5%; /*这里 10/16 = 0.625*/
+    font-family: PingFang-SC-Regular;
+}
+.clearfix::after{
+   display: block;
+   content: "";
+   height: 0;
+   font-size: 0;
+   overflow: hidden;
+   clear: both;
+}
+.clearfix{
+   zoom: 1;
+}
+.img-responsive{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.center-block{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.count{
+  background: url('../images/bg1.png');
+  background-size: 100% 100%;
+  background-repeat: repeat-y;
+  height: 800px;
+  position: relative;
+}
+.count>.p{
+  padding:20px;
+  position: relative;
+}
+.count>.p>span{
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
+.count>.p1{
+  margin-top:80%;
+}
+.count>.p1>a{
+  display: block;
+  background: url('../images/btn1.png') no-repeat;
+  background-size: 100% 100%;
+  width: 50%;
+  height: 50px;
+  line-height: 50px;
+  margin: 40px auto 30px auto;
+  text-align: center;
+  color: #000;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.count>.p2{
+  color: #fff;
+  font-size: 1.2rem;
+  padding:1% 0 0 12%;
+  position: absolute;
+  left: 0;
+  bottom:9%;
+}
+@keyframes imgFade {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.count>.p>span>img{
+  -webkit-transform: rotate(360deg);
+  animation: imgFade 3s linear infinite;
+  -moz-animation: imgFade 3s linear infinite;
+  -webkit-animation: imgFade 3s linear infinite;
+  -o-animation: imgFade 3s linear infinite;
+}

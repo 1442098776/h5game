@@ -1,0 +1,254 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html {
+    font-size: 62.5%; /*这里 10/16 = 0.625*/
+    font-family: PingFang-SC-Regular;
+}
+.clearfix::after{
+   display: block;
+   content: "";
+   height: 0;
+   font-size: 0;
+   overflow: hidden;
+   clear: both;
+}
+.clearfix{
+   zoom: 1;
+}
+.img-responsive{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.center-block{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+html,body,.app,.count{
+  width: 100%;
+  min-height: 100%;
+  max-height: auto;
+  height: 800px;
+}
+
+.count{
+  background: url('../images/bg1.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+.count>.p{
+  padding:10px 20px 0;
+  position: relative;
+  height: 75px;
+}
+.count>.p>a{
+  display: inline-block;
+  width: 90px;
+  float: left;
+}
+.count>.p>.span{
+  display: inline-block;
+  float: left;
+  height: 100%;
+  line-height: 80px;
+  color: #fff;
+  font-size: 2rem;
+}
+.count>.p>.span1{
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.count>.contenCount{
+  width: 217px;
+  margin:0 auto;
+}
+.contenCount>.p{
+  margin-top: 5px;
+  height: 12px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  box-shadow:0 0 2px 4px #fff;
+  position: relative;
+}
+.contenCount>.p>i{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: red;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  box-shadow:0 0 2px 4px #fff;
+}
+.contenCount>.p span{
+  position: absolute;
+  top:16px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.contenCount>.p span:first-of-type{
+  left: 0;
+}
+.contenCount>.p span:last-of-type{
+  right: 0;
+}
+.contenCount>.p1{
+  margin: 35% 0 5px 0;
+  padding: 0 7%;
+}
+.contenCount>.p2{
+  color: red;
+}
+.contenCount>.p2,.contenCount>.p3{
+  padding: 0 7%;
+  font-size: 1.6rem;
+}
+.contenCount>form{
+  width: 100%;
+  height: auto;
+  margin-top: 60%;
+}
+.contenCount>form>button{
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 35px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  background: url('../images/btn1.png') no-repeat;
+  background-size: 100% 100%;
+  border: 0;
+  font-size: 1.6rem;
+  color: #000;
+  text-align: center;
+  margin-top: 16px;
+}
+.contenCount>form span{
+  text-transform: uppercase;
+}
+.popup,.popup1{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  display: none;
+}
+/* 挑战成功弹窗 */
+.popup{
+  background:url('../images/bg.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+.popup .close,.popup1 .close{
+  margin: 5px 20px 0 0;
+  display: block;
+  float: right;
+  width: 50px;
+  height: 17%;
+  overflow: hidden;
+}
+.popup>.popupCount{
+  width: 80%;
+  margin: 60% auto 0 auto;
+}
+.popup>.popupCount>.p{
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.gade{
+  padding-left:20%;
+  margin:15% 0 20px;
+}
+.gade span{
+  display: block;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.chance{
+  color: #fff;
+  margin-bottom: 10px;
+}
+.chance>span{
+  color: red;
+  display: inline-block;
+  padding: 0 5px;
+}
+.discounts{
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 38px;
+  background: url('../images/btn1.png') no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+.pBottom>a{
+  display: inline-block;
+  width: 40%;
+  height: 30px;
+  line-height: 30px;
+  color: #000;
+  font-size: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  
+}
+.pBottom>a:first-of-type{
+  float: left;
+  background: url('../images/btn2.png') no-repeat;  
+  background-size: 100% 100%;
+}
+.pBottom>a:last-of-type{
+  float: right;
+  background: url('../images/btn3.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+/* 挑战失败弹窗 */
+@keyframes slide {
+  from {
+    right: -170px;
+  }
+  to {
+    right: 200%;
+  }
+}
+.slide{
+  animation:10s ease-in slide;
+  position: absolute;
+  top: 10%;
+  right: 200%;
+}
+.popup1{
+  background:url('../images/bg7.png') no-repeat;
+  background-size: 100% 100%;
+}
+.popup1>.popupCount1{
+  width: 80%;
+  margin: 70% auto 0 auto;
+}
+.popup1>.popupCount1>.p{
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+}
+.popupCount1>.gade{
+  margin-top: 10%;
+}
+.popupCount1>.discounts{
+  text-decoration: none;
+}
